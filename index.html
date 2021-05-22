@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>A simple DIY responsive slideshow made with HTML5, CSS3, and JavaScript</title>
-        <meta name="description" content="">
+        <title>Marilyn's Birthday Memories</title>
+        <meta name="description" content="family photos">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="demo/css/demostyles.css">
@@ -18,28 +18,61 @@
             <h1>Marilyn Solana's Birthday</h1>
             <p><span class="desc">Happy 70th Birthday!</span> </p>
         </header>
-        <div class="bss-slides num1" tabindex="1" autofocus="autofocus">
+        <br>
+        <br>
+        <h2>Smooth music will be chosen soon!</h2>
+        <audio controls src="demo/music/under-pressure-michael-kobrin-105bpm-3781.mp3" loop="true" autoplay=true>
+        </audio>
+
+        <div class="bss-slides num1" tabindex="1" autofocus="autofocus" display="flex">
             <figure>
-		      <img src="demo/img/File_000.jpeg" width="40%" /><figcaption>Mairlyn and Janet</figcaption>
+		      <img src="demo/img/File_000.jpeg" width="30%" /><figcaption>Mairlyn and Janet</figcaption>
             </figure>
             <figure>
-          <img src="demo/img/File_001.jpeg" width="40%" /><figcaption>pic2</figcaption>
+          <img src="demo/img/File_001.jpeg" width="30%" /><figcaption>pic2</figcaption>
             </figure>
         </div> <!-- // bss-slides -->
-        <embed src="demo/music/under-pressure-michael-kobrin-105bpm-3781.mp3" autostart>
-        </embed>
-<div class="content">
-<h2>Videos From Friends</h2>
 
-<p>Here are words that we want to say... </p>
+      <div class="content">
+      <h2>Videos From Friends</h2>
 
-<h2>Features</h2>
-<ul>
-    <li>fully responsive</li>
-    <li>option for auto-advancing slides, or manually advancing by user</li>
-    <li>multiple slideshows per-page</li>
-    <li>supports arrow-key navigation</li>
-    <li>full-screen toggle using HTML5 fullscreen api</li>
-    <li>swipe events supported on touch devices (requires <a href="https://github.com/hammerjs/hammer.js">hammer.js</a>)</li>
-    <li>written in vanilla JS--this means no jQuery dependency (much &hearts; for <a href="https://github.com/jquery/jquery">jQuery</a> though!)</li>
-</ul>
+      <p>Here are words that we want to say... </p>
+      <video display="flex" controls src="demo/video/IMG_3835.MP4">
+      </video>
+
+      <h2>Features</h2>
+      <ul>
+          <li>fully responsive</li>
+          <li>option for auto-advancing slides, or manually advancing by user</li>
+          <li>multiple slideshows per-page</li>
+          <li>supports arrow-key navigation</li>
+          <li>full-screen toggle using HTML5 fullscreen api</li>
+          <li>swipe events supported on touch devices (requires <a href="https://github.com/hammerjs/hammer.js">hammer.js</a>)</li>
+          <li>written in vanilla JS--this means no jQuery dependency (much &hearts; for <a href="https://github.com/jquery/jquery">jQuery</a> though!)</li>
+      </ul>
+
+  <footer>Example photos are property of their respective owners, all code is <a href="https://github.com/leemark/better-simple-slideshow/blob/gh-pages/LICENSE">freely licensed for your use</a>. <br>Made especially for you by <a href="http://themarklee.com">Mark Lee</a> aka <a href="http://twitter.com/@therealmarklee">@therealmarklee</a> <br><span>&#9774; + &hearts;</span>
+  </footer>
+
+  <script src="demo/js/hammer.min.js"></script><!-- for swipe support on touch interfaces -->
+  <script src="js/better-simple-slideshow.min.js"></script>
+  <script>
+  var opts = {
+      auto : {
+          speed : 3500,
+          pauseOnHover : true
+      },
+      fullScreen : false,
+      swipe : true
+  };
+  makeBSS('.num1', opts);
+
+  var opts2 = {
+      auto : false,
+      fullScreen : true,
+      swipe : true
+  };
+  makeBSS('.num2', opts2);
+</script>
+    </body>
+</html>
